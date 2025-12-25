@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NutriDex | Fruit Nutrition Database</title>
+    <link rel="stylesheet" href="./style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <h1>Nutri<span class="highlight">Dex</span></h1>
+            <p class="subtitle">Discover the science inside your daily fruit.</p>
+            <div class="search-box">
+                <input type="text" id="searchInput" placeholder="Search for a fruit (e.g., Apple, Mango)...">
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        <div id="fruitGrid" class="grid-container">
+        </div>
+    </main>
+
+    <div id="fruitModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            
+            <div class="modal-header" id="modalHeader">
+                <h2 id="mName">Fruit Name</h2>
+                <p id="mSubtitle">Subtitle</p>
+            </div>
+
+            <div class="modal-body">
+                <div class="main-stats">
+                    <div class="stat-box">
+                        <span class="label">Calories</span>
+                        <span class="value" id="mCal">0</span>
+                    </div>
+                    <div class="stat-box">
+                        <span class="label">Serving Size</span>
+                        <span class="value small" id="mServing">100g</span>
+                    </div>
+                </div>
+
+                <h3>Macronutrients</h3>
+                <div class="macro-bars">
+                    <div class="macro-row">
+                        <span>Carbs</span>
+                        <div class="bar-bg"><div class="bar-fill" id="barCarb" style="width: 0%"></div></div>
+                        <span id="mCarb">0g</span>
+                    </div>
+                    <div class="macro-row">
+                        <span>Protein</span>
+                        <div class="bar-bg"><div class="bar-fill" id="barPro" style="width: 0%"></div></div>
+                        <span id="mPro">0g</span>
+                    </div>
+                    <div class="macro-row">
+                        <span>Fat</span>
+                        <div class="bar-bg"><div class="bar-fill" id="barFat" style="width: 0%"></div></div>
+                        <span id="mFat">0g</span>
+                    </div>
+                </div>
+
+                <h3>Key Nutrients</h3>
+                <div class="vitamin-grid" id="mVitamins">
+                </div>
+
+                <div class="info-text">
+                    <h3>Health Benefits</h3>
+                    <p id="mDesc">Description text goes here.</p>
+                    <div class="tags" id="mTags"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="./data.js"></script>
+    <script src="./script.js"></script>
+</body>
+</html>
